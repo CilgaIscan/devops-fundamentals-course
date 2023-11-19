@@ -90,9 +90,9 @@ find() {
 inverseParam="$2"
 list() {
     checkDb
-    if [[ $inverseParam == "inverse" ]]
+    if [[ $inverseParam == "--inverse" ]]
     then
-      cat --number $DB_PATH | tac
+      cat --number $DB_PATH | sort -r 
     else
       cat --number $DB_PATH
     fi
